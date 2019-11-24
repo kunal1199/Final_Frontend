@@ -1,0 +1,125 @@
+body{
+    background: rgb(215, 225, 241);
+    word-wrap: break-word; /* old name */
+    overflow-wrap: break-word;
+}
+
+.box{
+    padding:60px 0px;
+}
+
+.box-part{
+    background: rgb(138, 171, 243);
+    border-radius: 10px; 
+    padding: 40px 10px;
+    margin: 20px 0px;
+    cursor: pointer;
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(2, 10, 10);
+    transition: all 0.5s ease-out;
+}
+
+.title {
+    font-size: 30px;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(4, 5, 24);
+}
+
+a {
+    color: rgb(27, 30, 221);
+}
+
+.on_top {
+    position:absolute;
+    top:30px;
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    background-color: rgb(143, 203, 218);
+    margin-bottom: 40px;
+}
+
+.portal {
+    font-size: 40px;
+    font-family: "Times New Roman", Times, serif;
+ }
+
+ h4{
+     margin-top:30px;
+ }
+
+ .logout {
+    position: absolute;
+    top:12px;
+    right:10px;
+    cursor: pointer;
+}
+
+h2 {
+    margin-top: 80px;
+    color: rgb(9, 19, 22)
+}
+
+p, span{
+    font-size: 18px;
+}
+*{
+    /*border: 1px solid white;*/
+}
+#classes_list{
+    margin-bottom: 10px;
+}
+#attendance_stats{
+    /*margin-left: 10px;*/
+    margin-bottom: 10px;
+}
+table{
+    /*border: 0.5px solid #5a7656;*/
+    width: 100%;
+}
+
+#classes_list{
+    border: 0.5px solid #5a7656
+}/*
+#classes_list, #classes_list>tr, #classes_list>td{
+    border-bottom: 0.5px solid #5a7656;
+    cursor: pointer;
+}*/
+td{
+    padding: 7px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+#stats{
+    position :absolute;
+    top:140px;
+    right:200px;
+    font-size: 25px;
+}
+/*	.noPadding{
+    background-color: #2e3038!important;
+    margin: 0px!important;
+    padding: 7px!important;
+    border: none!important;
+}
+.noPadding_btn{
+    background-color: #2e3038!important;
+    margin: 0px!important;
+    padding: 0px!important;
+    border: none!important;
+}
+*/
+
+.red{
+    color: red;
+}
+
+.c6c6ff{
+    color: #c6c6ff;
+}
+.green{
+    color: green;
+}

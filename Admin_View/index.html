@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Admin Portal</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet" />
+    <link rel = "stylesheet" type = "text/css" href = "./index.css" />
+    <script src="../js/jquery-3.4.1.js"></script>
+	<script src="../js/popper.min.js"></script>
+    <script src="../js/bootstrap.min.js"></script>
+    <script src="./index.js"></script>
+</head>
+<body>
+    <div class="container parent" style="width: 80%; margin-top:50px;padding-top:20px;position:relative;">   
+        <div class="on_top"><div class="portal">Attendance management Portal</div></div> 
+        <div id="loginbox" style="margin-top:90px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">   
+                             
+            <div class="panel panel-info" >
+                    <div class="panel-heading">
+                        <div class="panel-title" style="font-size: 50px; color: rgb(61, 61, 150)">Sign In</div>
+                    </div>     
+
+                    <div style="padding-top:30px" class="panel-body" >
+
+                        <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+                            
+                        <form id="loginform" class="form-horizontal" role="form">
+                                    
+                            <div style="margin-bottom: 25px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        <input id="login-username" type="text" class="form-control" name="username" value="" placeholder="username or email">                                        
+                                    </div>
+                                
+                            <div style="margin-bottom: 50px" class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                        <input id="login-password" type="password" class="form-control" name="password" placeholder="password">
+                                    </div>
+                            
+                                <div style="margin-top:10px" class="form-group">
+                                    <!-- Button -->
+
+                                    <div class="col-sm-12 controls">
+                                      <a id="btn-login" class="btn btn-success">Login  </a>
+
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <div id="message" class="col-md-12 control" style="margin-bottom:100px; color:brown;">
+                                        
+                                    </div>
+                                </div>
+
+                            </form>     
+
+
+
+                        </div>                     
+                    </div>  
+        </div>
+
+        <div id="after_login">
+            <h2 id="after_login_heading"></h2>
+            <div class="on_top">
+                <a class="logout">Logout</a>
+            </div>
+            
+            <div class="box">
+                    <div class="container">
+                         <div class="row">
+                                <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12" id="depts_redirect">
+                                        <div class="box-part">
+                                            <div class="title">
+                                                    <h4 class="text-center">DEPARTMENTS</h4>
+                                            </div>
+                                        </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12" id="teachers_redirect">
+                                    <div class="box-part">
+                                        <div class="title">
+                                                <h4 class="text-center">TEACHERS</h4>
+                                        </div>
+                                    </div>
+                                </div>
+                         </div>
+                    </div>
+            </div>
+        </div>
+
+        <div id ="departments_page">
+            <h2 style="text-align:center;">Departments Page</h2>
+            <div class="on_top">
+                <a id="alfromdept" class="back_button">Back</a>
+                <a class="logout">Logout</a>
+            </div>
+            <div class="box">
+                    <div class="container">
+                         <div class="row" id="departments_list">
+                        </div>
+                    </div>
+            </div>
+        </div>
+             
+        <div id ="mainsection_page">
+            <h2 id="mainsection_heading" style="text-align:center;" ></h2>
+            <div class="on_top">
+            <a id="deptfromms" class="back_button">Back</a>
+            <a class="logout">Logout</a>
+            </div>
+            <div class="box">
+                    <div class="container">
+                         <div class="row" id="mainsection_list">
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <div id ="subsection_page">
+            <h2 id="subsection_heading" style="text-align:center;"></h2>
+            <div class="on_top">
+                <a id="msfromss" class="back_button">Back</a>
+                <a class="logout">Logout</a>
+            </div>
+            <div class="box">
+                    <div class="container">
+                         <div class="row" id="subsection_list">
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <div id="section_mainpage">
+            <h2 id="smp_heading" style="text-align:center;"></h2>
+            <div class="on_top">
+                <a id="ssfromsmp" class="back_button">Back</a>
+                <a class="logout">Logout</a>
+            </div>
+            <div class="box">
+                <div class="container">
+                     <div class="row">
+                            <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12" id="students_redirect">
+                                    <div class="box-part">
+                                        <div class="title">
+                                                <h4 class="text-center">Students</h4>
+                                        </div>
+                                    </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-4 col-xs-12" id="subjects_redirect">
+                                <div class="box-part">
+                                    <div class="title">
+                                            <h4 class="text-center">Subjects</h4>
+                                    </div>
+                                </div>
+                            </div>
+                     </div>
+                </div>
+        </div>
+        </div>
+
+        <div id ="students_page">
+            <h2 id="students_heading" style="text-align:center;"></h2>
+            <div class="on_top">
+                <a id="smfromsp" class="back_button">Back</a>
+                <a class="logout">Logout</a>
+            </div>
+            <ol id="students_list"></ol>
+        </div>
+
+        <div id ="timetable_page">
+            <h2 id="timetable_heading" style="text-align:center;"></h2>
+            <div class="on_top">
+                <a id="spfromtp" class="back_button">Back</a>
+                <a class="logout">Logout</a>
+            </div>
+            <ol id="timetable_list"></ol>
+        </div>
+
+        <div id ="subjects_page">
+            <h2 id="subjects_heading" style="text-align:center;"></h2>
+            <div class="on_top">
+                <a id="smfromsbp" class="back_button">Back</a>
+                <a class="logout">Logout</a>
+            </div>
+            <ol id="subjects_list"></ol>
+        </div>
+
+        <div id ="subjects_form" style="margin-top:120px;">
+            <h2>Subject information:</h2>
+                <div class="form-group">
+                    Name: <input type="text" name="name" class="form-control" id="new_subject_name">
+                </div>
+                <div id="new_subject_msg"></div>
+                <input type="submit" class="btn btn-success" value="Submit" id="new_subject">
+            
+            <div class="on_top">
+                <a id="sbpfromform" class="back_button">Back</a>
+                <a class="logout">Logout</a>
+            </div>     
+        </div>
+
+        <div id ="timetable_form" style="margin-top:120px;">
+            <h2>Timetable information:</h2>
+                <div class="form-group">
+                    Teacher ID: <input type="text" name="name" class="form-control" id="tt_teacher">
+                </div>
+                <div class="form-group">
+                    Day: <input type="text" name="name" class="form-control" id="tt_day">
+                </div>
+                <div class="form-group">
+                    Time: <input type="text" name="name" class="form-control" id="tt_time">
+                </div>
+                <div id="new_timetable_msg"></div>
+                <input type="submit" class="btn btn-success" value="Submit" id="new_timetable">
+            
+            <div class="on_top">
+                <a id="ttpfromform" class="back_button">Back</a>
+                <a class="logout">Logout</a>
+            </div>     
+        </div>
+
+        <div id ="subsection_form" style="margin-top:120px;">
+            <h2>Section information:</h2>
+                <div class="form-group">
+                    Name: <input type="text" name="name" class="form-control" id="new_subsection_name">
+                </div>
+                <div id="new_subsection_msg"></div>
+                <input type="submit" class="btn btn-success" value="Submit" id="new_subsection">
+            
+            <div class="on_top">
+                <a id="ssfromform" class="back_button">Back</a>
+                <a class="logout">Logout</a>
+            </div>     
+        </div>
+
+        <div id ="dept_form" style="margin-top:120px;">
+                  <h2>Department information:</h2>
+                  <div class="form-group">
+                        Name: <input type="text" name="name" class="form-control" id="new_dept_name">
+                  </div>
+                  <div id="new_dept_msg"></div>
+                  <input type="submit" class="btn btn-success" value="Submit" id="new_dept">
+            <div class="on_top">
+                <a id="deptfromform" class="back_button">Back</a>
+                <a class="logout">Logout</a>
+            </div>
+            
+        </div>
+        
+        <div id ="mainsection_form" style="margin-top:120px;">
+                      <h2>Section information:</h2>
+                      <div class="form-group">
+                            Name: <input type="text" name="name" class="form-control" id="new_section_name">
+                      </div>
+                      <div id="new_section_msg"></div>
+                      <input type="submit" class="btn btn-success" value="Submit" id="new_section">
+                    <div class="on_top">
+                        <a id="msfromform" class="back_button">Back</a>
+                        <a class="logout">Logout</a>
+                    </div>
+            
+        </div>
+
+
+        <div id ="students_form" style="margin-top:120px;">
+                        <h2>Student information:</h2>
+                            <div class="form-group">
+                                Roll No.: <input type="text" name="name" class="form-control" id="student_username">
+                            </div>
+                            <div class="form-group">
+                                Password: <input type="text" name="name" class="form-control" id="student_password">
+                            </div>
+                            <div class="form-group">
+                                First Name: <input type="text" name="name" class="form-control" id="student_firstname">
+                            </div>
+                            <div class="form-group">
+                                Last Name: <input type="text" name="name" class="form-control" id="student_lastname">
+                            </div>
+                            <div class="form-group">
+                                E-mail: <input type="text" name="name" class="form-control" id="student_email">
+                            </div>
+                            <div id="new_student_msg"></div>
+                            <input type="submit" class="btn btn-success" value="Submit" id="new_student">
+                <div class="on_top">
+            <a id="spfromform" class="back_button">Back</a>
+            <a class="logout">Logout</a>
+            </div>
+        </div>
+
+        <div id ="teachers_form" style="margin-top:120px;">
+                        <h2>Teacher information:</h2>
+                        <div class="form-group">
+                            UserName: <input type="text" name="name" class="form-control" id="teacher_username">
+                        </div>
+                        <div class="form-group">
+                            Password: <input type="text" name="name" class="form-control" id="teacher_password">
+                        </div>
+                        <div class="form-group">
+                            First Name: <input type="text" name="name" class="form-control" id="teacher_firstname">
+                        </div>
+                        <div class="form-group">
+                            Last Name: <input type="text" name="name" class="form-control" id="teacher_lastname">
+                        </div>
+                        <div id="new_teacher_msg"></div>
+                        <input type="submit" class="btn btn-success" value="Submit" id="new_teacher">
+            <div class="on_top">
+        <a id="tpfromform" class="back_button">Back</a>
+        <a class="logout">Logout</a>
+        </div>
+    </div>
+
+        <div id ="teachers_page"style="margin-top:120px;">
+            <ol id="teachers_list"></ol>
+            <div class="on_top">
+            <a id="alfromteachers" class="back_button">Back</a>
+            <a class="logout">Logout</a>
+        </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>

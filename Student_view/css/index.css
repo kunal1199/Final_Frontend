@@ -1,0 +1,22 @@
+body {
+    background: rgb(215, 225, 241);
+}
+
+.on_top {
+    position:absolute;
+    top:30px;
+    width: 100%;
+    height: 60px;
+    text-align: center;
+    background-color: rgb(143, 203, 218);
+    margin-bottom: 40px;
+}
+
+.portal {
+    font-size: 36px;
+    font-family: "Times New Roman", Times, serif;
+ }
+
+ .parent {
+    position: relative;
+}
